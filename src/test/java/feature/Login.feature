@@ -7,7 +7,7 @@ Feature: This feature would be used to design the login page of the application
     When I click on the Login Link
     And I enter the username
     And I enter the password
-    And I click on the Login BUtton
+    And I click on the Login BUttonfi
     Then I should land on the home page
 
   Scenario: Validate the successful login using test data

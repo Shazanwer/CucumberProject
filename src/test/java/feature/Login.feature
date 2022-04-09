@@ -28,3 +28,10 @@ Feature: This feature would be used to design the login page of the application
       | UserName    | Password |
       | abc@xyz.com | Pqr@1234 |
       | sha@abc.com | Pqr@1234 |
+
+  Scenario: Validate the negative login using test data
+    When I click on the Login Link
+    And I enter the username "abc@xyz.com"
+    And I enter the password "Pqr@1234"
+    And I click on the Login Button
+    Then I should get the message "The email or password you have entered is invalid."

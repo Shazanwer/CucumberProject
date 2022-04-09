@@ -1,5 +1,6 @@
 package stepDefs;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,7 +39,7 @@ public class LoginSteps {
 		// Write code here that turns the phrase above into concrete actions
 		WebElement Password = driver.findElement(By.id("password"));
 		Password.sendKeys("Abcd@123");
-	}	
+	}
 
 	@Then("I should land on the home page")
 	public void i_should_land_on_the_home_page() {
@@ -65,6 +66,14 @@ public class LoginSteps {
 		// Write code here that turns the phrase above into concrete actions
 		WebElement LoginBtn = driver.findElement(By.name("btn_login"));
 		LoginBtn.click();
+	}
+
+	@Then("I should get the message {string}")
+	public void i_should_get_the_message(String ExpectedMsg) {
+		// Write code here that turns the phrase above into concrete actions
+		WebElement msgbox = driver.findElement(By.id("msg_box"));
+		String ActualMsg = msgbox.getText();
+		Assert.assertEquals(ExpectedMsg, ActualMsg);
 	}
 
 }

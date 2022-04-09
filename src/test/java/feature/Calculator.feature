@@ -11,6 +11,7 @@ Feature: This feature will be used to test the calculator for adding and subtrac
     When I sub 7 and 5
     Then I should get the result 2
 
+@Sanity
   Scenario Outline: Test for addition of 2 nos
     When I add <n1> and <n2>
     Then I should get the result <res>

@@ -17,7 +17,7 @@ public class LoginSteps {
 	public void i_have_opened_the_application_in_the_browser() throws InterruptedException {
 		// Write code here that turns the phrase above into concrete actions
 		driver.get("https://www.simplilearn.com");
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 	}
 
 	@When("I click on the Login Link")

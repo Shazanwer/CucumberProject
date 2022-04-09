@@ -7,21 +7,21 @@ Feature: This feature would be used to design the login page of the application
     When I click on the Login Link
     And I enter the username
     And I enter the password
-    And I click on the Login BUttonfi
+    And I click on the Login Button
     Then I should land on the home page
 
   Scenario: Validate the successful login using test data
     When I click on the Login Link
     And I enter the username "abc@xyz.com"
     And I enter the password "Pqr@1234"
-    And I click on the Login BUtton
+    And I click on the Login Button
     Then I should land on the home page
 
   Scenario Outline: Validate the successful login using multiple test data
     When I click on the Login Link
     And I enter the username "<UserName>"
     And I enter the password "<Password>"
-    And I click on the Login BUtton
+    And I click on the Login Button
     Then I should land on the home page
 
     Examples: 
